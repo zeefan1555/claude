@@ -1,0 +1,40 @@
+{
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "3b1aad22-411b-4a3d-b04a-2fa898e9b785",
+    "ANTHROPIC_BASE_URL": "https://ark.cn-beijing.volces.com/api/coding",
+    "ANTHROPIC_MODEL": "doubao-seed-2.0-code"
+  },
+  "permissions": {
+    "defaultMode": "acceptEdits"
+  },
+  "enabledPlugins": {
+    "chrome-devtools-mcp@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "chrome-devtools-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "ChromeDevTools/chrome-devtools-mcp"
+      }
+    },
+    "anthropic-agent-skills": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/skills"
+      }
+    }
+  },
+  "mcpServers": {
+    "chrome-devtools": {
+      "command": "npx",
+      "args": [
+        "chrome-devtools-mcp@latest",
+        "--autoConnect",
+        "--channel=stable"
+      ]
+    }
+  },
+  "hasCompletedOnboarding": true
+}
