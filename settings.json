@@ -1,9 +1,4 @@
 {
-  "env": {
-    "ANTHROPIC_AUTH_TOKEN": "3b1aad22-411b-4a3d-b04a-2fa898e9b785",
-    "ANTHROPIC_BASE_URL": "https://ark.cn-beijing.volces.com/api/coding",
-    "ANTHROPIC_MODEL": "doubao-seed-2.0-code"
-  },
   "permissions": {
     "defaultMode": "acceptEdits"
   },
@@ -36,5 +31,5 @@
       ]
     }
   },
-  "hasCompletedOnboarding": true
+  "model": "opus"
 }
