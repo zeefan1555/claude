@@ -1,11 +1,20 @@
 {
   "permissions": {
-    "defaultMode": "acceptEdits"
+    "defaultMode": "bypassPermissions"
+  },
+  "model": "opus",
+  "statusLine": {
+    "type": "command",
+    "command": "bash -c 'plugin_dir=$(ls -d \"${CLAUDE_CONFIG_DIR:-$HOME/.claude}\"/plugins/cache/claude-hud/claude-hud/*/ 2>/dev/null | awk -F/ '\"'\"'{ print $(NF-1) \"\\t\" $(0) }'\"'\"' | sort -t. -k1,1n -k2,2n -k3,3n -k4,4n | tail -1 | cut -f2-); exec \"/Users/yibeikongqiu/.nvm/versions/node/v20.20.2/bin/node\" \"${plugin_dir}dist/index.js\"'"
   },
   "enabledPlugins": {
     "chrome-devtools-mcp@claude-plugins-official": true,
     "superpowers@claude-plugins-official": true,
-    "skill-creator@claude-plugins-official": true
+    "skill-creator@claude-plugins-official": true,
+    "claude-hud@claude-hud": true,
+    "obsidian@obsidian-skills": true,
+    "fakechat@claude-plugins-official": true,
+    "telegram@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "chrome-devtools-plugins": {
@@ -19,6 +28,18 @@
         "source": "github",
         "repo": "anthropics/skills"
       }
+    },
+    "claude-hud": {
+      "source": {
+        "source": "github",
+        "repo": "jarrodwatts/claude-hud"
+      }
+    },
+    "obsidian-skills": {
+      "source": {
+        "source": "github",
+        "repo": "kepano/obsidian-skills"
+      }
     }
   },
   "mcpServers": {
@@ -31,5 +52,5 @@
       ]
     }
   },
-  "model": "opus"
+  "skipDangerousModePermissionPrompt": true
 }
